@@ -57,6 +57,19 @@
   	-moz-transform: rotate(1deg);
 }
 
+.flight_table
+{
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.sub_heading
+{
+	color: #999999;
+	font-size: 16pt;
+	font-family: "beanpole";
+}
+
 a:hover 
 {
 	color:#ACD1E9;
