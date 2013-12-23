@@ -1,0 +1,42 @@
+.header
+{
+	background-color: #ACD1E9;
+	margin-bottom: 40px;
+}
+
+.header_main_image
+{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.body_container
+{
+	font-family: 'Helvetica Neue', verdana, sans-serif;
+	color: #706e67;
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+}
+
+.flower_heading
+{
+	color: #C0C0C0;
+	font-size: 20pt;
+	font-family: "beanpole";
+	padding-bottom: 15px;
+}
+
+.polaroid
+{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #EBEBEB;
+	padding: 10px;
+	margin: 10px;
+	background-color: white;
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  	-moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  	-webkit-transform: rotate(1deg);
+  	-moz-transform: rotate(1deg);
+}
