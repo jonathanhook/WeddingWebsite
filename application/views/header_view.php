@@ -17,19 +17,25 @@
   </head>
 
   <body>
-  	<header> 
-  		<div class="header">
-  			<div class="row">
-  				<div class="col-md-3">
+  	<header>
+      <nav class="navbar navbar-fixed-top" role="navigation">
+        <div style="background-color: #CCCCCC;">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="width:630px; margin-left: auto; margin-right: auto;">
+            <ul class="nav navbar-nav">
+              <li class="navbar_item"><a class="navbar_link" href="welcome">Home</a></li>
+              <li class="navbar_item"><a class="navbar_link" href="getting_here">Getting Here</a></li>
+              <li class="navbar_item"><a class="navbar_link" href="venue">Venue and Accomodation</a></li>
+              <li class="navbar_item"><a class="navbar_link" href="our_wedding_day">Our Wedding Day</a></li>		  				
+              <li class="navbar_item"><a class="navbar_link" href="things_to_see">Things to See</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-  				</div>
-  				<div class="col-md-6 header_main_image">
-	  				<img src="<?php echo base_url();?>assets/header/main.png" />
-	  			</div>
-	  			<div class="col-md-3">
-
-  				</div>
-	  		</div>
-  		</div>
+    	<div class="header">
+    		<div class="header_main_image" >
+    		  <img src="<?php echo base_url();?>assets/header/main.png" />
+        </div>
+		  </div>
   	</header>
 

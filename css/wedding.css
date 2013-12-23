@@ -2,17 +2,33 @@
 {
 	background-color: #ACD1E9;
 	margin-bottom: 40px;
+	width: 100%;
+	padding-top: 65px;
 }
 
 .header_main_image
 {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
 
+.navbar_item
+{
+	font-size: 16pt;
+	font-family: "beanpole";
+}
+
+.navbar_link
+{
+	color: white;
+}
+
 .body_container
 {
-	font-family: 'Helvetica Neue', verdana, sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	color: #706e67;
 	margin-left: auto;
 	margin-right: auto;
@@ -39,4 +55,9 @@
   	-moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
   	-webkit-transform: rotate(1deg);
   	-moz-transform: rotate(1deg);
+}
+
+a:hover 
+{
+	color:#ACD1E9;
 }
