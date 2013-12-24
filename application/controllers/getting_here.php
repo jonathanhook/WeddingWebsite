@@ -9,21 +9,6 @@ class Getting_Here extends CI_Controller
 		$this->load->view('footer_view');
 	}
 
-	public function directions()
-	{
-		$address = $this->input->post('address');
-
-		if($address != '')
-		{
-			$query = 'https://maps.google.com/maps?f=d&saddr=' . $address . '&daddr=Zamek Liblice';
-			header('Location: ' . $query) ;
-		}
-		else
-		{
-			$this->index();
-		}
-	}
-
 	public function trains()
 	{
 		$date = $this->input->post('date');

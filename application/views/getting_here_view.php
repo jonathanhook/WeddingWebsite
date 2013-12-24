@@ -1,10 +1,3 @@
-<script>
-	$(function() 
-	{
-	   $( "#datepicker" ).datepicker({ dateFormat: 'dd/mm/yy', defaultDate: '10/07/2014' });
-	});
-</script>
-
 <div class="body_container">
 	<div class="flower_heading">
 		<img src="<?php echo base_url();?>assets/body/title_flourish.png" />
@@ -395,6 +388,8 @@
 	<p>
 		Our wedding and reception will be held at <a href='venue'>Zámek Liblice</a>. 
 		The venue is accessible by car and taxi, and by train from Prague.
+	</p>
+	<p>
 		The address and contact details of the venue are:
 	</p>
 	<p>
@@ -421,15 +416,25 @@
 	</p>
 
 	<div class="directions_box">
-		<?php echo form_open('getting_here/directions'); ?>
+		<?php echo form_open('getting_here/directions', 'id="directions_form"'); ?>
 		<div class="input-group">
-			<?php echo form_input('address', '', 'placeholder="Enter address..." class="form-control"'); ?>
+			<?php echo form_input('address', '', 'placeholder="Enter address..." class="form-control" id="form_address"'); ?>
 			<span class="input-group-btn">
 				<?php echo form_submit('submit', 'Get directions', 'class="btn btn-default"'); ?>
 			</span>
 		</div>
 		<?php echo form_close() ?>
 	</div>
+
+	<script>
+		$("#directions_form").submit(function(event) 
+		{
+  			var query = 'https://maps.google.com/maps?f=d&saddr=' + $('#form_address').val() + '&daddr=Zamek Liblice';
+  			window.open(query, '_empty', false);
+
+  			event.preventDefault();
+		});
+	</script>
 
 	<h2 class="sub_heading">Getting to the venue by train</h2>
 	<p>
@@ -442,15 +447,35 @@
 	</p>
 
 	<div class="train_box">
-		<?php echo form_open('getting_here/trains'); ?>
+		<?php echo form_open('getting_here/trains', 'id="trains_form"'); ?>
 		<div class="input-group">
 			<?php echo form_input('date', '', 'placeholder="Departure date..." id="datepicker" class="form-control" style="width: 162px;"'); ?>
-			<?php echo form_input('hour', '', 'placeholder="Hour..." class="form-control" style="width: 80px;"'); ?>
-			<?php echo form_input('minute', '', 'placeholder="Minute..." class="form-control" style="width: 80px;"'); ?>
+			<?php echo form_input('hour', '', 'placeholder="Hour..." class="form-control" style="width: 80px;" id="hour"'); ?>
+			<?php echo form_input('minute', '', 'placeholder="Minute..." class="form-control" style="width: 80px;" id="minute"'); ?>
 			<span class="input-group-btn">
 				<?php echo form_submit('submit', 'Get train times', 'class="btn btn-default"'); ?>
 			</span>
 		</div>
 		<?php echo form_close() ?>
 	</div>
+
+	<script>
+		$(function() 
+		{
+		   $( "#datepicker" ).datepicker({ dateFormat: 'dd/mm/yy', defaultDate: '10/07/2014' });
+		});
+
+		$("#trains_form").submit(function(event) 
+		{
+			var date = $('#datepicker').val();
+			var hour = $('#hour').val();
+			var minute = $('#minute').val();
+
+  			var query = $query = 'http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f=Prague&date=' + date + '&t=Bysice&time='  + hour +  '%3a'  + minute +  '&v=&option=10&byarr=false&cmd=cmdSearch';
+  			window.open(query, '_empty', false);
+
+  			event.preventDefault();
+		});
+	</script>
+
 </div> 
