@@ -430,7 +430,7 @@
 		$("#directions_form").submit(function(event) 
 		{
   			var query = 'https://maps.google.com/maps?f=d&saddr=' + $('#form_address').val() + '&daddr=Zamek Liblice';
-  			window.open(query, '_empty', false);
+  			window.open(query, '_blank', false);
 
   			event.preventDefault();
 		});
@@ -443,39 +443,67 @@
 		Hlavní Nádraží is in the centre of Prague and has a metro stop on the red line.
 	</p>
 	<p>
-		You can use the form below to get specific train times from Prague to Byšice.
+		You can use the form below to get specific train times to Prague to Byšice and back.
 	</p>
 
 	<div class="train_box">
 		<?php echo form_open('getting_here/trains', 'id="trains_form"'); ?>
-		<div class="input-group">
-			<?php echo form_input('date', '', 'placeholder="Departure date..." id="datepicker" class="form-control" style="width: 162px;"'); ?>
-			<?php echo form_input('hour', '', 'placeholder="Hour..." class="form-control" style="width: 80px;" id="hour"'); ?>
-			<?php echo form_input('minute', '', 'placeholder="Minute..." class="form-control" style="width: 80px;" id="minute"'); ?>
-			<span class="input-group-btn">
-				<?php echo form_submit('submit', 'Get train times', 'class="btn btn-default"'); ?>
-			</span>
+
+		<div class="input-group" style="margin-bottom: 5px;">
+		 	<span class="input-group-addon">Date</span>
+			<?php echo form_input('date', '', 'placeholder="Pick departure date..." id="datepicker" class="form-control"'); ?>
 		</div>
+
+		<div class="input-group" style="margin-bottom: 5px;">
+		 	<span class="input-group-addon">Hour</span>
+			<?php echo form_input('hour', '', 'placeholder="Enter departure hour..." id="hour" class="form-control"'); ?>
+		</div>
+
+		<div class="input-group" style="margin-bottom: 5px;">
+		 	<span class="input-group-addon">Minute</span>
+			<?php echo form_input('minute', '', 'placeholder="Enter depature minute..." id="minute" class="form-control"'); ?>
+		</div>
+		
+		<div class="btn-group">
+  			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    			Find train times
+    			<span class="caret"></span>
+		  	</button>
+		  	<ul class="dropdown-menu" role="menu">
+			    <li><a href="#" onClick="outClicked(); return false;">Out (Prague to Byšice)</a></li>
+			    <li><a href="#" onClick="returnClicked(); return false;">Return (Byšice to Prague)</a></li>
+	   		</ul>
+			</div>
+		</div>
+
 		<?php echo form_close() ?>
 	</div>
 
-	<script>
+	<script type="text/javascript">
 		$(function() 
 		{
-		   $( "#datepicker" ).datepicker({ dateFormat: 'dd/mm/yy', defaultDate: '10/07/2014' });
+		   $("#datepicker").datepicker({ dateFormat: 'dd/mm/yy', defaultDate: '10/07/2014' });
 		});
 
-		$("#trains_form").submit(function(event) 
+		function findTrains(from, to)
 		{
 			var date = $('#datepicker').val();
 			var hour = $('#hour').val();
 			var minute = $('#minute').val();
 
-  			var query = $query = 'http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f=Prague&date=' + date + '&t=Bysice&time='  + hour +  '%3a'  + minute +  '&v=&option=10&byarr=false&cmd=cmdSearch';
-  			window.open(query, '_empty', false);
+  			var query = $query = 'http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f=' + from + '&date=' + date + '&t=' + to + '&time='  + hour +  '%3a'  + minute +  '&v=&option=10&byarr=false&cmd=cmdSearch';
+  			window.open(query, '_blank', false);
+		}
 
-  			event.preventDefault();
-		});
+		function outClicked()
+		{
+			findTrains('Prague', 'Bysice');		
+		}
+
+		function returnClicked()
+		{
+			findTrains('Bysice', 'Prague');
+		}
 	</script>
 
 </div> 
