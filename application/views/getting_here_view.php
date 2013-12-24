@@ -1,3 +1,10 @@
+<script>
+	$(function() 
+	{
+	   $( "#datepicker" ).datepicker({ dateFormat: 'dd/mm/yy', defaultDate: '10/07/2014' });
+	});
+</script>
+
 <div class="body_container">
 	<div class="flower_heading">
 		<img src="<?php echo base_url();?>assets/body/title_flourish.png" />
@@ -6,7 +13,7 @@
 	</div>
 
 	<p>
-		Our wedding and reception will be held at <a href='venue'>Zámek Liblice</a>, which is around 40km to the north of Prague in the Czech Republic.
+		Our wedding and reception will be held at <a href='venue'>Zámek Liblice</a>, which is around <a href="#directions">40km to the north of Prague</a> in the Czech Republic.
 		The most conveinent way to travel from the UK to our wedding will be to fly to Prague's Václav Havel Airport.
 		We've compiled a list of flights to Prague from a number of main UK airports, which we hope will be helpful when booking your trip.
 	</p>
@@ -379,28 +386,71 @@
 
 	<iframe class="pull-right polaroid" width="480" height="360" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d163435.06905056577!2d14.532901050390624!3d50.20464382703479!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470be42f5b0d5ec7%3A0x283cde8c95333546!2sZamek+Liblice!5e0!3m2!1sen!2s!4v1387835842920"></iframe>
 
-	<div class="flower_heading">
+	<div class="flower_heading" id="directions">
 		<img src="<?php echo base_url();?>assets/body/title_flourish.png" />
 		Getting to the Venue
 		<img src="<?php echo base_url();?>assets/body/title_flourish.png" />
 	</div>
 
 	<p>
-		Our wedding and reception will be held at <a href='venue'>Zámek Liblice</a>. The venue is accessible by car and taxi, and by train from Prague.
+		Our wedding and reception will be held at <a href='venue'>Zámek Liblice</a>. 
+		The venue is accessible by car and taxi, and by train from Prague.
+		The address and contact details of the venue are:
+	</p>
+	<p>
+		Zámek Liblice<br />
+		Byšice 61<br />
+		277 32 Liblice<br />
+		Czech Republic<br />
+	</p>
+	<p>
+		Tel: +420 315 632 111<br />
+		Email: <a href="mailto:recepce@zamek-liblice.cz">recepce@zamek-liblice.cz</a><br />
+		Web: <a href="http://www.zamek-liblice.cz">www.zamek-liblice.cz</a><br />
 	</p>
 
-	<h2 class="sub_heading">By Car</h2>
+	<h2 class="sub_heading">Getting to the venue by car</h2>
 	<p>
-		From Prague city centre, take the E55/8 to Melnik and then turn right onto the R16 (<a href="https://goo.gl/maps/L8e4f">download directions</a>). 
+		From Prague city centre, take the E55/8 to Melnik and then turn right onto the R16 (<a href="https://goo.gl/maps/L8e4f">view full directions</a>). 
 	</p>
 	<p>
-		From Prague airport, take the R7 until exit 18 and then join the R16 via the R23644 (<a href="https://goo.gl/maps/tbm9x">download directions</a>).
+		From Prague airport, take the R7 until exit 18 and then join the R16 via the R23644 (<a href="https://goo.gl/maps/tbm9x">view full directions</a>).
+	</p>
+	<p>
+		To get a specific set of directions from, e.g., your hotel in Prague to the venue, enter an address in the box below.
 	</p>
 
-	<h2 class="sub_heading">By Train</h2>
+	<div class="directions_box">
+		<?php echo form_open('getting_here/directions'); ?>
+		<div class="input-group">
+			<?php echo form_input('address', '', 'placeholder="Enter address..." class="form-control"'); ?>
+			<span class="input-group-btn">
+				<?php echo form_submit('submit', 'Get directions', 'class="btn btn-default"'); ?>
+			</span>
+		</div>
+		<?php echo form_close() ?>
+	</div>
+
+	<h2 class="sub_heading">Getting to the venue by train</h2>
 	<p>
-		There are hourly trains from <a href="https://goo.gl/maps/in2Gg">Prague Main Station</a> (Praha Hlavní Nádraží) to <a href="https://goo.gl/maps/pfH4Z">Byšice</a>, which is 2km from the venue. 
-		Trains leave at 45 minutes past the hour and take an hour. Most trains are direct, but a small number require a change at Všetaty (<a href="http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f=Prague&date=11.07.2014&t=Bysice&time=15%3a00&v=&option=10&byarr=false&cmd=cmdSearch">view timetable</a>).
+		There are hourly trains from <a href="https://goo.gl/maps/in2Gg">Prague Main Station</a> (Praha Hlavní Nádraží) to <a href="https://goo.gl/maps/pfH4Z">Byšice</a> (pronounced be-sheet-se), which is 2km from the venue. 
+		Trains leave at 45 minutes past the hour and take an hour. Most trains are direct, but a small number require a change at Všetaty. There are direct trains at 7:45, 9:45 and 11:45 on the morning of the wedding (<a href="http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f=Prague&date=11.07.2014&t=Bysice&time=07%3a00&v=&option=10&byarr=false&cmd=cmdSearch">view timetable</a>).
 		Hlavní Nádraží is in the centre of Prague and has a metro stop on the red line.
 	</p>
+	<p>
+		You can use the form below to get specific train times from Prague to Byšice.
+	</p>
+
+	<div class="train_box">
+		<?php echo form_open('getting_here/trains'); ?>
+		<div class="input-group">
+			<?php echo form_input('date', '', 'placeholder="Departure date..." id="datepicker" class="form-control" style="width: 162px;"'); ?>
+			<?php echo form_input('hour', '', 'placeholder="Hour..." class="form-control" style="width: 80px;"'); ?>
+			<?php echo form_input('minute', '', 'placeholder="Minute..." class="form-control" style="width: 80px;"'); ?>
+			<span class="input-group-btn">
+				<?php echo form_submit('submit', 'Get train times', 'class="btn btn-default"'); ?>
+			</span>
+		</div>
+		<?php echo form_close() ?>
+	</div>
 </div> 

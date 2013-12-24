@@ -18,7 +18,19 @@
 .navbar_item
 {
 	font-size: 16pt;
-	font-family: "beanpole";
+	font-family: "bean_poleregular";
+}
+
+.navbar_container
+{
+	background-color: #CCCCCC;
+}
+
+.navbar_menu_items
+{
+	width: 630px; 
+	margin-left: auto; 
+	margin-right: auto;
 }
 
 .navbar_link
@@ -39,7 +51,7 @@
 {
 	color: #C0C0C0;
 	font-size: 20pt;
-	font-family: "beanpole";
+	font-family: "bean_poleregular";
 	padding-bottom: 15px;
 }
 
@@ -63,11 +75,34 @@
 	margin-bottom: 25px;
 }
 
+.directions_box
+{
+	margin-top: 15px;
+	width:450px;
+	padding: 5px;
+	background-color: #DDDDDD;
+	border-radius: 5px;
+}
+
+.train_box
+{
+	margin-top: 15px;
+	width: 450px;
+	padding: 5px;
+	background-color: #DDDDDD;
+	border-radius: 5px;
+}
+
 .sub_heading
 {
 	color: #999999;
 	font-size: 16pt;
-	font-family: "beanpole";
+	font-family: "bean_poleregular";
+}
+
+.footer_padding
+{
+	margin-top: 100px;
 }
 
 a:hover 
