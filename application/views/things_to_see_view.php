@@ -15,7 +15,7 @@
 
 	<h2>Our Prague highlights</h2>
 	<p>
-		We've compiled a list and map of some of the most famous tourist attractions in Prague.
+		We've compiled a list and <a href="https://mapsengine.google.com/map/edit?mid=zPDpRcNOoekY.keNH3o1L7NOc" target="_blank">map</a> of some of the most famous tourist attractions in Prague.
 		The list is roughly follows a route that starts up on the hill near the Castle, continues down into the Old Town, via the Charles Bridge, and onto Wenceslas Square.
 		Sights are marked with red pins and places to eat and drink are marked in orange. 
 	</p>
@@ -75,21 +75,24 @@
 	</div>
 
 	<h2 class="sub_heading">Places to eat and drink</h2>
+	<p>
+		Some of our favourite places to eat and drink in the centre of Prague.
+		You can find the location of these restaurants and pubs on our <a href="https://mapsengine.google.com/map/edit?mid=zPDpRcNOoekY.keNH3o1L7NOc" target="_blank">map</a>.
+	</p>
 
 	<h3><a href="http://www.cafeslavia.cz">Café Slavia</a></h3>
 	<p>
-		A nice traditional cafe in Prague city centre.
+		Our favourite traditional cafe in Prague city centre.
 		We recommend the roast duck (kačenka pečená).
 		If you visit, check out the Art Deco interior and, if sightseeing is getting too much, have an Absinthe with the green fairy.
-		Slavia is an excellent option for lunch or afternoon coffee and cake while sightseeing.
-		It is by the river on the old town side of Most Legií, which is a 10-minute walk from the Old Town Square, the Charles Bridge and Wenceslas Square (<a href="https://goo.gl/maps/70taI">see map</a>).
+		Slavia is an excellent option for lunch or afternoon coffee and cake while sightseeing, as is a 10-minute walk from the Old Town Square, the Charles Bridge and Wenceslas Square.
 	</p>
 
 	<h3><a href="http://www.plzenskarestaurace.cz/en">Municipal House</a></h3>
 	<p>
 		A famous example of the Art Nouveau architectural style and home to the Smetana concert hall and ballroom.
 		At the Municipal House you can eat traditional Czech cuisine in the cellar Plzeňská Restaurace or have coffee and cafe in the grand Café Epopej.
-		The Municipal House is also handy for a bite to eat when sightseeing, as it is in the city centre on Náměstí Republiky (<a href="https://goo.gl/maps/A6MO1">see map</a>).
+		The Municipal House is also handy for a bite to eat when sightseeing, as it is in the city centre on Náměstí Republiky.
 	</p>
 
 	<h3><a href="http://www.cafeimperial.cz/en/">Café Imperial</a></h3>
@@ -98,7 +101,22 @@
 		The cafe is in the famous Art Deco Imperial Hotel.
 		Café Imperial is very popular, so if you would like to dine it is almost always essential that you book in advance.
 		However, you can book a table <a href="http://www.cafeimperial.cz/en/reservation">online</a>.
-		Café Imperial is to the east of the city centre, just off Náměstí Republiky (<a href="https://goo.gl/maps/A2fGw">see map</a>).
+		Café Imperial is to the east of the city centre, just off Náměstí Republiky.
+	</p>
+
+	<h3><a href="http://cafesavoy.ambi.cz/cz/">Café Savoy</a></h3>
+	<p>
+		Jonathan’s parents found Café Savoy when visiting Prague, and recommended that we go on our first trip there together. 
+		Café Savoy serves coffee and cake, and a full menu of traditional Czech and contemporary dishes. 
+		Breakfast at Café Savoy is also highly recommended and it is within walking distance of the funicular to Petřín tower. 
+		Therefore, it might be a good place to start a long day of sightseeing.
+	</p>
+
+	<h3><a href="http://www.restauraceuvejvodu.cz/">U Vejvodů</a></h3>
+	<p>
+		U Vejvodů is a traditional Czech pub, which serves very good food. 
+		The speciality of U Vejvodů is Koleno, a very large portion of pork knee shared by two people (or one very hungry person!). 
+		U Vejvodů serves food until 2AM, so might be a good place to go if you arrive into Prague on a late flight and are staying the city centre.
 	</p>
 
 	<h3><a href="http://www.pivovarskyklub.com">Pivovarský Klub</a></h3>
@@ -106,10 +124,10 @@
 		A pub for beer lovers in a country of beer lovers. 
 		Pivovarský Klub must have the widest selection of beers in the Czech Republic, it's a must visit if you like beer!
 		Like most good pubs in the Czech Republic, food is served as well drink.
-		To get to Pivovarský klub, take the metro to Florenc and then walk 200m down Křižíkova (<a href="https://goo.gl/maps/wcNNX">see map</a>).
+		To get to Pivovarský klub, take the metro to Florenc and then walk 200m down Křižíkova.
 	</p>
 
-		<div class="flower_heading">
+	<div class="flower_heading">
 		<img src="<?php echo base_url();?>assets/body/title_flourish.png" />
 		Things to see and do around the wedding venue
 		<img src="<?php echo base_url();?>assets/body/title_flourish.png" />
