@@ -16,7 +16,7 @@
 	<h2>Our Prague highlights</h2>
 	<p>
 		We've compiled a list and map of some of the most famous tourist attractions in Prague.
-		The list is roughly follows a route from up on the hill near the Castle and down into the Old Town, crossing over the Charles Bridge.
+		The list is roughly follows a route that starts up on the hill near the Castle, continues down into the Old Town, via the Charles Bridge, and onto Wenceslas Square.
 		Sights are marked with red pins and places to eat and drink are marked in orange. 
 	</p>
 
@@ -54,10 +54,20 @@
 		There are lots of interesting shops in the winding streets that surround the square.
 	</p>
 
+	<h3><a href="http://en.wikipedia.org/wiki/Wenceslas_Square">Wenceslas Square (Václavské Náměstí)</a></h3>
+	<p>
+		Wenceslas Square is Prague’s other main square. 
+		The square is 750 metres long and is overlooked by the Wenceslas Monument and the Czech National Museum (currently closed for renovations). 
+		The square is lined with shops and attractions.
+		Although modest and above a McDonalds, we found that the Museum of Communism at the bottom end of the square was particularly interesting. 
+		The square is also the main destination for British stag parties; so some of the pubs are a bit seedy (and the beer is a lot more expensive!).
+	</p>
+
 	<h3><a href="http://en.wikipedia.org/wiki/Dancing_House">The Dancing House (Tančící dům)</a></h3>
 	<p>
 		The Dancing House is the nickname for the distinctive Nationale-Nederlanden building, which was designed by Vlado Milunić and Frank Gehry. 
-		The Dancing House is a short walk from the green line metro station Karlovo Náměstí.
+		The Dancing House is a short walk from the yellow line metro station Karlovo Náměstí. 
+		You can take a yellow line train from Můstek if you are at Wenceslas Square.
 	</p>
 
 	<div class="pull-right polaroid">
