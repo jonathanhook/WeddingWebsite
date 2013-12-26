@@ -29,9 +29,9 @@
             <ul class="nav navbar-nav">
               <li class="navbar_item"><a class="navbar_link" href="<?php echo base_url();?>welcome">Home</a></li>
               <li class="navbar_item"><a class="navbar_link" href="<?php echo base_url();?>getting_here">Getting Here</a></li>
-              <li class="navbar_item"><a class="navbar_link" href="<?php echo base_url();?>venue">Venue and Accomodation</a></li>
+              <li class="navbar_item"><a class="navbar_link" href="<?php echo base_url();?>venue">Venue & Accommodation</a></li>
               <li class="navbar_item"><a class="navbar_link" href="<?php echo base_url();?>our_wedding_day">Our Wedding Day</a></li>		  				
-              <li class="navbar_item"><a class="navbar_link" href="<?php echo base_url();?>things_to_see">Things to See</a></li>
+              <li class="navbar_item"><a class="navbar_link" href="<?php echo base_url();?>things_to_see">Things to See & Do</a></li>
             </ul>
           </div>
         </div>

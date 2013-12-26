@@ -5,6 +5,7 @@
 		<img src="<?php echo base_url();?>assets/body/title_flourish.png" />
 	</div>
 	<p>
-		We will put the timetable for the our wedding day here, once it has been confirmed.
+		We will post the timetable for our wedding day here, once it's been finalised.
+		We can confirm now that the ceremony will begin at 13:30.
 	</p>
 </div>

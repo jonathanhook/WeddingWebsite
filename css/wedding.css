@@ -1,3 +1,17 @@
+h2
+{
+	color: #999999;
+	font-size: 17pt;
+	font-family: "bean_poleregular";
+}
+
+h3
+{
+	color: #999999;
+	font-size: 12pt;
+	font-weight: bold;
+}
+
 .header
 {
 	background-color: #ACD1E9;
@@ -28,7 +42,7 @@
 
 .navbar_menu_items
 {
-	width: 630px; 
+	width: 665px; 
 	margin-left: auto; 
 	margin-right: auto;
 }
@@ -61,7 +75,7 @@
 	border-style: solid;
 	border-color: #EBEBEB;
 	padding: 10px;
-	margin: 10px;
+	margin: 15px;
 	background-color: white;
 	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
   	-moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
@@ -78,7 +92,7 @@
 .directions_box
 {
 	margin-top: 15px;
-	width: 400px;
+	width: 550px;
 	padding: 5px;
 	background-color: #DDDDDD;
 	border-radius: 5px;
@@ -87,17 +101,21 @@
 .train_box
 {
 	margin-top: 15px;
-	width: 400px;
-	padding: 5px;
+	margin-bottom: 25px;
+	width: 550px;
+	padding: 5px 0px 5px 5px;
 	background-color: #DDDDDD;
 	border-radius: 5px;
 }
 
-.sub_heading
+.train_box_row
 {
-	color: #999999;
-	font-size: 16pt;
-	font-family: "bean_poleregular";
+	margin: 0px
+}
+
+.train_box_col
+{
+	padding: 0px 5px 0px 0px;
 }
 
 .footer_padding
@@ -109,3 +127,4 @@ a:hover
 {
 	color:#ACD1E9;
 }
+

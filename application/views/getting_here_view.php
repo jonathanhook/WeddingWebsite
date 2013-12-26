@@ -7,8 +7,9 @@
 
 	<p>
 		Our wedding and reception will be held at <a href='venue'>Zámek Liblice</a>, which is around <a href="#directions">40km to the north of Prague</a> in the Czech Republic.
-		The most conveinent way to travel from the UK to our wedding will be to fly to Prague's Václav Havel Airport.
+		The most convenient way to travel from the UK to our wedding will be to fly to Prague's Václav Havel Airport.
 		We've compiled a list of flights to Prague from a number of main UK airports, which we hope will be helpful when booking your trip.
+		We have only included direct flights on low-fares airlines.
 	</p>
 
 	<div class="panel panel-default flight_table">
@@ -400,7 +401,6 @@
 	</p>
 	<p>
 		Tel: +420 315 632 111<br />
-		Email: <a href="mailto:recepce@zamek-liblice.cz">recepce@zamek-liblice.cz</a><br />
 		Web: <a href="http://www.zamek-liblice.cz">www.zamek-liblice.cz</a><br />
 	</p>
 
@@ -430,7 +430,7 @@
 		$("#directions_form").submit(function(event) 
 		{
   			var query = 'https://maps.google.com/maps?f=d&saddr=' + $('#form_address').val() + '&daddr=Zamek Liblice';
-  			window.open(query, '_blank', false);
+  			window.open(query, '_empty', false);
 
   			event.preventDefault();
 		});
@@ -438,7 +438,7 @@
 
 	<h2 class="sub_heading">Getting to the venue by train</h2>
 	<p>
-		There are hourly trains from <a href="https://goo.gl/maps/in2Gg">Prague Main Station</a> (Praha Hlavní Nádraží) to <a href="https://goo.gl/maps/pfH4Z">Byšice</a> (pronounced be-sheet-se), which is 2km from the venue. 
+		There are hourly trains from <a href="https://goo.gl/maps/in2Gg">Prague Main Station</a> (Praha Hlavní Nádraží) to <a href="https://goo.gl/maps/pfH4Z">Byšice</a>, which is 2km from the venue. 
 		Trains leave at 45 minutes past the hour and take an hour. Most trains are direct, but a small number require a change at Všetaty. There are direct trains at 7:45, 9:45 and 11:45 on the morning of the wedding (<a href="http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f=Prague&date=11.07.2014&t=Bysice&time=07%3a00&v=&option=10&byarr=false&cmd=cmdSearch">view timetable</a>).
 		Hlavní Nádraží is in the centre of Prague and has a metro stop on the red line.
 	</p>
@@ -449,30 +449,30 @@
 	<div class="train_box">
 		<?php echo form_open('getting_here/trains', 'id="trains_form"'); ?>
 
-		<div class="input-group" style="margin-bottom: 5px;">
-		 	<span class="input-group-addon">Date</span>
-			<?php echo form_input('date', '', 'placeholder="Pick departure date..." id="datepicker" class="form-control"'); ?>
-		</div>
-
-		<div class="input-group" style="margin-bottom: 5px;">
-		 	<span class="input-group-addon">Hour</span>
-			<?php echo form_input('hour', '', 'placeholder="Enter departure hour..." id="hour" class="form-control"'); ?>
-		</div>
-
-		<div class="input-group" style="margin-bottom: 5px;">
-		 	<span class="input-group-addon">Minute</span>
-			<?php echo form_input('minute', '', 'placeholder="Enter depature minute..." id="minute" class="form-control"'); ?>
-		</div>
-		
-		<div class="btn-group">
-  			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    			Find train times
-    			<span class="caret"></span>
-		  	</button>
-		  	<ul class="dropdown-menu" role="menu">
-			    <li><a href="#" onClick="outClicked(); return false;">Out (Prague to Byšice)</a></li>
-			    <li><a href="#" onClick="returnClicked(); return false;">Return (Byšice to Prague)</a></li>
-	   		</ul>
+		<div class="row train_box_row">
+			<div class="col-md-5 train_box_col">
+				<div class="input-group">
+				 	<span class="input-group-addon">Date</span>
+					<?php echo form_input('date', '', 'placeholder="Departure date..." id="datepicker" class="form-control"'); ?>
+				</div>
+			</div>
+			<div class="col-md-4 train_box_col">
+				<div class="input-group">
+				 	<span class="input-group-addon">Time</span>
+					<?php echo form_input('time', '', 'placeholder="and time..." id="time" class="form-control"'); ?>
+				</div>
+			</div>
+			<div class="col-md-3 train_box_col">
+				<div class="btn-group">
+		  			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		    			Get train times
+		    			<span class="caret"></span>
+				  	</button>
+				  	<ul class="dropdown-menu" role="menu">
+					    <li><a href="#" onClick="outClicked(); return false;">Out (Prague to Byšice)</a></li>
+					    <li><a href="#" onClick="returnClicked(); return false;">Return (Byšice to Prague)</a></li>
+			   		</ul>
+				</div>
 			</div>
 		</div>
 
@@ -488,11 +488,26 @@
 		function findTrains(from, to)
 		{
 			var date = $('#datepicker').val();
-			var hour = $('#hour').val();
-			var minute = $('#minute').val();
+			var time = $('#time').val();
 
-  			var query = $query = 'http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f=' + from + '&date=' + date + '&t=' + to + '&time='  + hour +  '%3a'  + minute +  '&v=&option=10&byarr=false&cmd=cmdSearch';
-  			window.open(query, '_blank', false);
+			var timeComponents = time.split(/[\s-:;,\.]+/, 2);
+
+			if(timeComponents.length > 0)
+			{
+				var hour = parseInt(timeComponents[0]);
+				var minute = 0;
+
+				if(timeComponents.length > 1)
+				{
+					minute = parseInt(timeComponents[1]);
+				}
+
+				if(!isNaN(hour) && !isNaN(minute))
+				{
+					var query = 'http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f=' + from + '&date=' + date + '&t=' + to + '&time='  + hour +  '%3a'  + minute +  '&v=&option=10&byarr=false&cmd=cmdSearch';
+	  				window.open(query, '_empty', false);	
+				}
+			}
 		}
 
 		function outClicked()
@@ -505,5 +520,40 @@
 			findTrains('Bysice', 'Prague');
 		}
 	</script>
+
+	<div class="flower_heading" id="public_transport">
+		<img src="<?php echo base_url();?>assets/body/title_flourish.png" />
+		Getting into and around Prague
+		<img src="<?php echo base_url();?>assets/body/title_flourish.png" />
+	</div>
+	<p>
+		We hope that you will have the chance to go and explore Prague before or after our wedding.
+		If you'd like some ideas for things to see and do in Prague, take a look at the <a href='things_to_see'>things to see and do</a> page.
+		The best way to get around Prague is to use the excellent public transport system, which comprises buses, trams and an underground metro.
+	</p>
+	<p>
+		In this section, we've included some information to help you get into and around Prague using public transport.
+		You can find more specific information from the Prague <a href="http://www.dpp.cz/en/">public transport website</a>, which is translated into English.
+	</p>
+
+	<h2 class="sub_heading">Tickets</h2>
+	<p>
+		The buses, trams and metro in Prague all use the same tickets. 
+		You can buy tickets from machines and kiosk at stations, and from some newsagents near stations.
+		Tickets last for a certain amount of time and need to be validated the first time you use one to travel.
+		You can validate a ticket on a bus or tram using a machine on-board. 
+		When travelling on the metro, you can validate a ticket using machines at the top of the escalators.
+		Once you've validated your ticket once, you can use it as many times as you like until the time runs out.
+		We've found that buying a 24-hour ticket (110kc) is usually the best option for exploring Prague.
+	</p>
+
+	<h2 class="sub_heading">Getting into the city centre from the airport</h2>
+	<p>
+		You can travel to most parts of the city centre by the metro. 
+		However, the metro line doesn't yet go all of the way to the airport.
+		The best way to get to the metro from the airport is to take the 119 bus to Dejvická metro station (15-20 minutes).
+		From Dejvická you can then take the green metro line into the city centre.
+	</p>
+
 
 </div> 

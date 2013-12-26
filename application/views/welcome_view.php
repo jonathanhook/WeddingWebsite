@@ -10,7 +10,7 @@
 	</div>
 
 	<p>
-		We are getting married on Friday the 11th of July 2014 at <a href='venue'>Zámek Liblice</a>, a castle that is around <a href="getting_here#directions">40km north of Prague</a> in the Czech Republic.
+		We are getting married on Friday 11th of July 2014 at <a href='venue'>Zámek Liblice</a>, a castle that is around <a href="getting_here#directions">40km north of Prague</a> in the Czech Republic.
 	</p>
 	<p>
 		We've made this website to provide you with all the information that you'll need to come and share in our big day. 

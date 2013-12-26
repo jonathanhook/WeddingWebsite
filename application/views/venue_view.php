@@ -18,7 +18,7 @@
 
 	<div class="flower_heading">
 		<img src="<?php echo base_url();?>assets/body/title_flourish.png" />
-		Accomodation
+		Accommodation
 		<img src="<?php echo base_url();?>assets/body/title_flourish.png" />
 	</div>
 	<p>
