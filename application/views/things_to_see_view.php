@@ -127,12 +127,29 @@
 		To get to Pivovarský klub, take the metro to Florenc and then walk 200m down Křižíkova.
 	</p>
 
+	<div class="pull-right polaroid">
+		<img src="<?php echo base_url();?>assets/things_to_see/melnik.jpg" />
+	</div>
+
 	<div class="flower_heading">
 		<img src="<?php echo base_url();?>assets/body/title_flourish.png" />
 		Things to see and do around the wedding venue
 		<img src="<?php echo base_url();?>assets/body/title_flourish.png" />
 	</div>
 	<p>
-		Our wedding will take place near the historical town of Mělník.
+		The historic town of Mělník is 10km along the R16 from the wedding venue. 
+		Mělník has a <a href="http://www.zamekmelnik.com/english/zamek.php">renaissance castle</a>, which is open from 10:00-17:00 each day. 
+		You can tour the grounds of the castle and look over the confluence of the Labe and Vltava rivers for free. 
+		If you’d like to go inside the castle it costs 80kč for a guided tour.
+	</p>
+	<p>
+		Mělník is the centre of one of only two wine growing regions in Bohemia. 
+		You can sample the local wine by touring the castle’s wine cellars for 25kč. 
+		Mělník also has a pretty square (Náměstí Míru) with a number of shops and restaurants.  
+		If you are still in the area a week after the weeking, there is a wine festival in Mělník.
+	</p>
+	<p>
+		There is also a <a href="http://solnajeskyne.liblice.net/">salt cave spa</a> in Liblice within walking distance of the venue, if you’d like to try something different and good for your health in the local area.
+		There is also a spa and wine cellar in the wedding venue.
 	</p>
 </div>

@@ -6,6 +6,6 @@
 	</div>
 	<p>
 		We will post the timetable for our wedding day here, once it's been finalised.
-		We can confirm now that the ceremony will begin at 13:30.
+		We can confirm now that the ceremony will begin at 13:30 and will be followed by a reception with lunch, dancing and an evening buffet.
 	</p>
 </div>
