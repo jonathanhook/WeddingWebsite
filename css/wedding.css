@@ -29,10 +29,22 @@ h3
 	padding-bottom: 30px;
 }
 
+.navbar .navbar-nav 
+{
+  display: inline-block;
+  float: none;
+}
+
+.navbar .navbar-collapse 
+{
+  text-align: center;
+}
+
 .navbar_item
 {
 	font-size: 16pt;
 	font-family: "bean_poleregular";
+	margin-bottom: -5px;
 }
 
 .navbar_container
@@ -42,7 +54,6 @@ h3
 
 .navbar_menu_items
 {
-	width: 665px; 
 	margin-left: auto; 
 	margin-right: auto;
 }

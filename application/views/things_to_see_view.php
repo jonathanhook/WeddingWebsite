@@ -146,7 +146,7 @@
 		Mělník is the centre of one of only two wine growing regions in Bohemia. 
 		You can sample the local wine by touring the castle’s wine cellars for 25kč. 
 		Mělník also has a pretty square (Náměstí Míru) with a number of shops and restaurants.  
-		If you are still in the area a week after the weeking, there is a wine festival in Mělník.
+		If you are still in the area a week after the wedding, there is a wine festival in Mělník.
 	</p>
 	<p>
 		There is also a <a href="http://solnajeskyne.liblice.net/">salt cave spa</a> in Liblice within walking distance of the venue, if you’d like to try something different and good for your health in the local area.

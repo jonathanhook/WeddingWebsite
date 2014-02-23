@@ -39,6 +39,7 @@
               <li class="navbar_item"><a class="navbar_link" href="<?php echo base_url();?>venue">Venue & Accommodation</a></li>
               <li class="navbar_item"><a class="navbar_link" href="<?php echo base_url();?>our_wedding_day">Our Wedding Day</a></li>		  				
               <li class="navbar_item"><a class="navbar_link" href="<?php echo base_url();?>things_to_see">Things to See & Do</a></li>
+              <li class="navbar_item"><a class="navbar_link" href="<?php echo base_url();?>wedding_list">Gift List</a></li>
             </ul>
           </div>
         </div>
