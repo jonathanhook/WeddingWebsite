@@ -406,10 +406,10 @@
 
 	<h2 class="sub_heading">Getting to the venue by car</h2>
 	<p>
-		From Prague city centre, take the E55/8 to Melnik and then turn right onto the R16 (<a href="https://goo.gl/maps/L8e4f">view full directions</a>). 
+		From Prague city centre, take the E55/8 to Melnik and then turn right onto the R16 (<a href="https://goo.gl/maps/yZm8E" target="_empty">view full directions</a>). 
 	</p>
 	<p>
-		From Prague airport, take the R7 until exit 18 and then join the R16 via the R23644 (<a href="https://goo.gl/maps/tbm9x">view full directions</a>).
+		From Prague airport, take the R7 until exit 18 and then join the R16 via the R23644 (<a href="https://goo.gl/maps/tbm9x" target="_empty">view full directions</a>).
 	</p>
 	<p>
 		To get a specific set of directions from, e.g., your hotel in Prague to the venue, enter an address in the box below.
@@ -430,7 +430,7 @@
 		$("#directions_form").submit(function(event) 
 		{
   			var query = 'https://maps.google.com/maps?f=d&saddr=' + $('#form_address').val() + '&daddr=Zamek Liblice';
-  			window.open(query, '_empty', false);
+  			window.open(query, '_blank', false);
 
   			event.preventDefault();
 		});
@@ -438,7 +438,7 @@
 
 	<h2 class="sub_heading">Getting to the venue by train</h2>
 	<p>
-		There are hourly trains from <a href="https://goo.gl/maps/in2Gg">Prague Main Station</a> (Praha Hlavní Nádraží) to <a href="https://goo.gl/maps/pfH4Z">Byšice</a>, which is 2km from the venue. 
+		There are hourly trains from <a href="https://goo.gl/maps/in2Gg" target="_empty">Prague Main Station</a> (Praha Hlavní Nádraží) to <a href="https://goo.gl/maps/pfH4Z">Byšice</a>, which is 2km from the venue. 
 		Trains leave at 45 minutes past the hour and take an hour. Most trains are direct, but a small number require a change at Všetaty. There are direct trains at 7:45, 9:45 and 11:45 on the morning of the wedding (<a href="http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f=Prague&date=11.07.2014&t=Bysice&time=07%3a00&v=&option=10&byarr=false&cmd=cmdSearch">view timetable</a>).
 		Hlavní Nádraží is in the centre of Prague and has a metro stop on the red line.
 	</p>
@@ -505,7 +505,7 @@
 				if(!isNaN(hour) && !isNaN(minute))
 				{
 					var query = 'http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f=' + from + '&date=' + date + '&t=' + to + '&time='  + hour +  '%3a'  + minute +  '&v=&option=10&byarr=false&cmd=cmdSearch';
-	  				window.open(query, '_empty', false);	
+	  				window.open(query, '_blank', false);	
 				}
 			}
 		}
