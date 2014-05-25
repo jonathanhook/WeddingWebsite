@@ -31,11 +31,13 @@
 	</p>
 	<h2>The night before (10th of July)</h2>
 	<p>
-		We are also considering having a barbecue and drinks the night before at the venue for anyone who is around.
-		Please contact us if you'd like to come to this, so we can book the right amount of food.
+		We are also having a barbecue and wine tasting the night before at the venue for anyone who is around.
+		The food will cost 90kč per head (approx. £3) and the wine tasting 450kč (approx £13).
+		If you have indicated on your invite that you would like to come to this, we will ask you to pay Lucy's Mum after the wedding.
+		If you don't want to partake in the wine tasting, but would still like to come to the BBQ, please let us know as soon as possible.
 	</p>
 	<p>
-		19:00-23:00 - Barbecue and wine tasting at Zámek Liblice (TBC).<br />
+		19:00-23:00 - Barbecue and wine tasting at Zámek Liblice.<br />
 	</p>
 
 </div>

@@ -406,10 +406,10 @@
 
 	<h2 class="sub_heading">Getting to the venue by car</h2>
 	<p>
-		From Prague city centre, take the E55/8 to Melnik and then turn right onto the R16 (<a href="https://goo.gl/maps/yZm8E" target="_empty">view full directions</a>). 
+		From Prague city centre, take the E55/9 to Melnik and then turn right onto the R16 (<a href="https://goo.gl/maps/yZm8E" target="_empty">view full directions</a>). 
 	</p>
 	<p>
-		From Prague airport, take the R7 until exit 18 and then join the R16 via the R23644 (<a href="https://goo.gl/maps/tbm9x" target="_empty">view full directions</a>).
+		From Prague airport, take the R7 and then join the R16 at Slaný (<a href="https://goo.gl/maps/fnc9a" target="_empty">view full directions</a>).
 	</p>
 	<p>
 		To get a specific set of directions from, e.g., your hotel in Prague to the venue, enter an address in the box below.
@@ -426,6 +426,14 @@
 		<?php echo form_close() ?>
 	</div>
 
+	<br />
+	<p>
+		It is compulsory to have your headlights on at all times when driving. 
+		You should obtain a motorway tax sticker (provided with hire cars or purchasable at border/petrol stations if bringing your own car). 
+		Any alcohol when driving is strictly forbidden. 
+		We recommend you read the AA’s guidance for further information including speed limits which is available <a href="http://www.theaa.com/motoring_advice/touring_tips/czech-republic.pdf">here</a>.
+	<p/>
+
 	<script>
 		$("#directions_form").submit(function(event) 
 		{
@@ -438,12 +446,18 @@
 
 	<h2 class="sub_heading">Getting to the venue by train</h2>
 	<p>
-		There are hourly trains from <a href="https://goo.gl/maps/in2Gg" target="_empty">Prague Main Station</a> (Praha Hlavní Nádraží) to <a href="https://goo.gl/maps/pfH4Z">Byšice</a>, which is 2km from the venue. 
-		Trains leave at 45 minutes past the hour and take an hour. Most trains are direct, but a small number require a change at Všetaty. There are direct trains at 7:45, 9:45 and 11:45 on the morning of the wedding (<a href="http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f=Prague&date=11.07.2014&t=Bysice&time=07%3a00&v=&option=10&byarr=false&cmd=cmdSearch">view timetable</a>).
+		There are regular trains from <a href="https://goo.gl/maps/in2Gg" target="_empty">Prague Main Station</a> (Praha Hlavní Nádraží) to <a href="https://goo.gl/maps/pfH4Z">Byšice</a>, which is 2km from the venue, and <a href="https://goo.gl/maps/EBa1z">Všetaty</a>, which is 6.8km from the venue. 
 		Hlavní Nádraží is in the centre of Prague and has a metro stop on the red line.
 	</p>
+
+	</p>
 	<p>
-		You can use the form below to get specific train times to Prague to Byšice and back.
+		We have arranged a minibus taxi to collect you from Byšice and Všetaty stations on the afternoon before and morning of the wedding, and drop you back there on the day after.
+		If you would like to be collected by the taxi, please let us know what train you will be arriving on so we can arrange this.
+		This taxi might not have child seats, but we can arrange for a lift for anyone bringing a baby (please let us know).
+	</p>
+	<p>
+		You can use the form below to get specific train times to Prague to Byšice/Všetaty and back.
 	</p>
 
 	<div class="train_box">
@@ -469,8 +483,10 @@
 		    			<span class="caret"></span>
 				  	</button>
 				  	<ul class="dropdown-menu" role="menu">
-					    <li><a href="#" onClick="outClicked(); return false;">Out (Prague to Byšice)</a></li>
-					    <li><a href="#" onClick="returnClicked(); return false;">Return (Byšice to Prague)</a></li>
+					    <li><a href="#" onClick="out_bs_Clicked(); return false;">Out (Prague to Byšice)</a></li>
+					    <li><a href="#" onClick="out_vs_Clicked(); return false;">Out (Prague to Všetaty)</a></li>
+					    <li><a href="#" onClick="return_bs_Clicked(); return false;">Return (Byšice to Prague)</a></li>
+					    <li><a href="#" onClick="return_vs_Clicked(); return false;">Return (Všetaty to Prague)</a></li>
 			   		</ul>
 				</div>
 			</div>
@@ -510,16 +526,87 @@
 			}
 		}
 
-		function outClicked()
+		function out_bs_Clicked()
 		{
 			findTrains('Prague', 'Bysice');		
 		}
 
-		function returnClicked()
+		function out_vs_Clicked()
+		{
+			findTrains('Prague', 'Všetaty');		
+		}
+
+		function return_bs_Clicked()
 		{
 			findTrains('Bysice', 'Prague');
 		}
+
+		function return_vs_Clicked()
+		{
+			findTrains('Všetaty', 'Prague');
+		}
 	</script>
+
+	<p>
+		The following trains will run on the morning of the wedding and will get you to the venue on time:
+	</p>
+
+	<div class="panel panel-default flight_table">
+	  <div class="panel-heading">
+	  	Trains to the venue on the morning of the wedding (11th July).
+	  </div>
+
+		<table class="table">
+		    <tr>
+		    	<th>From</th>
+		    	<th>To</th>
+		    	<th>Departs</th>
+		    	<th>Arrives</th>
+		    </tr>
+
+		    <tr>
+		    	<td>Prague Main (Hlavní Nádraží)</td>
+		    	<td>Byšice (2km from venue)</td>
+		    	<td>7:48</td>
+		    	<td>8:46</td>
+		    </tr>
+
+		    <tr>
+		    	<td>Prague Main (Hlavní Nádraží)</td>
+		    	<td>Všetaty (6.8km from venue)</td>
+		    	<td>8:40</td>
+		    	<td>9:39</td>
+		    </tr>
+
+		    <tr>
+		    	<td>Prague Main (Hlavní Nádraží)</td>
+		    	<td>Všetaty (6.8km from venue)</td>
+		    	<td>9:25</td>
+		    	<td>10:06</td>
+		    </tr>
+
+ 		    <tr>
+		    	<td>Prague Main (Hlavní Nádraží)</td>
+		    	<td>Byšice (2km from venue)</td>
+		    	<td>9:48</td>
+		    	<td>10:46</td>
+		    </tr>
+
+		    <tr>
+		    	<td>Prague Main (Hlavní Nádraží)</td>
+		    	<td>Všetaty (6.8km from venue)</td>
+		    	<td>10:48</td>
+		    	<td>11:35</td>
+		    </tr>
+
+		    <tr>
+		    	<td>Prague Main (Hlavní Nádraží)</td>
+		    	<td>Byšice (2km from venue)</td>
+		    	<td>11:48</td>
+		    	<td>12:46</td>
+		    </tr>
+		</table>
+	</div>
 
 	<div class="flower_heading" id="public_transport">
 		<img src="<?php echo base_url();?>assets/body/title_flourish.png" />
