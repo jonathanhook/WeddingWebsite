@@ -30,9 +30,11 @@
 
   <body>
   	<header>
+
+      
       <nav class="navbar navbar-fixed-top" role="navigation">
         <div class="navbar_container">
-          <div class="collapse navbar-collapse navbar_menu_items">
+          <div class="navbar-collapse navbar_menu_items collapse">
             <ul class="nav navbar-nav">
               <li class="navbar_item"><a class="navbar_link" href="<?php echo base_url();?>welcome">Home</a></li>
               <li class="navbar_item"><a class="navbar_link" href="<?php echo base_url();?>getting_here">Getting Here</a></li>
@@ -44,6 +46,8 @@
           </div>
         </div>
       </nav>
+    
+
 
     	<div class="header">
     		<div class="header_main_image" >
@@ -51,4 +55,6 @@
         </div>
 		  </div>
   	</header>
+
+
 
